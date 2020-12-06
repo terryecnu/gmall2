@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gmall-admin-service
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yml
+      discovery:
+        server-addr: 127.0.0.1:8848

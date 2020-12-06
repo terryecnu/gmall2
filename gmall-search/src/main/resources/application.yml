@@ -1,0 +1,27 @@
+server:
+  port: 8086
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_null  # 序列化时过滤为null的属性
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.209:8848
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 192.168.1.209:9300
+  rabbitmq:
+    host: 192.168.1.209
+    username: gmall
+    password: gmall
+    virtual-host: /gmall
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
